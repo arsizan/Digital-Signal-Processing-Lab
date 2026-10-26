@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+#ok
 # ---------------------------------------------------------
 # DIRECT TRANSLATION OF MATLAB SCRIPT
 # ---------------------------------------------------------
@@ -10,7 +10,7 @@ StopTime = 1               # seconds[cite: 2]
 
 # np.arange(start, stop, step) excludes the stop value, 
 # so we add 'dt' to include StopTime, matching MATLAB's 0:dt:StopTime[cite: 2]
-t = np.arange(0, StopTime + dt, dt) 
+t = np.arange(0, StopTime , dt) 
 
 ## cosine wave:[cite: 2]
 Fc = 5                     # hertz[cite: 2]

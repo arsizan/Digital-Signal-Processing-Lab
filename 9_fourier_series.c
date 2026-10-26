@@ -1,7 +1,7 @@
 //fourier series
 #include <stdio.h>
 #include <math.h>
-
+//ok
 #define PI 3.14159265358979323846
 
 // Midpoint rule for numerical integration
@@ -69,3 +69,69 @@ int main() {
 
     return 0;
 }
+
+
+//fourier series
+// #include <stdio.h>
+// #include <math.h>
+
+// #define PI 3.14159265358979323846
+// #define STEPS 100000
+
+// double w0 = PI;
+// double T0 = 2.0;
+// double t_start = 0.0;      /* integration limits */
+// double t_end   = 1.0;
+
+// /* ===== signal: change only this function ===== */
+// double f(double t)
+// {
+//     return 1.0;
+// }
+// /* ============================================= */
+
+// /* kind: 0 -> f(t),  1 -> f(t)cos(n w0 t),  2 -> f(t)sin(n w0 t) */
+// double integrate(int kind, int n)
+// {
+//     double dt = (t_end - t_start) / STEPS;
+//     double sum = 0.0;
+//     int i;
+//     for (i = 0; i < STEPS; i++)
+//     {
+//         double t = t_start + i*dt + dt/2.0;
+//         double v = f(t);
+//         if (kind == 1)      v = v * cos(n*w0*t);
+//         else if (kind == 2) v = v * sin(n*w0*t);
+//         sum += v * dt;
+//     }
+//     return sum;
+// }
+
+// int main()
+// {
+//     int n, n_max = 5;
+//     double a0, an, bn;
+
+//     a0 = (1.0/T0) * integrate(0, 0);
+//     printf("a0 =\n  %f\n\n", a0);
+
+//     printf("an =\n  [ ");
+//     for (n = 1; n <= n_max; n++)
+//     {
+//         an = (2.0/T0) * integrate(1, n);
+//         if (fabs(an) < 1e-6) an = 0.0;
+//         printf("%f ", an);
+//     }
+//     printf("]\n\n");
+
+//     printf("bn =\n  [ ");
+//     for (n = 1; n <= n_max; n++)
+//     {
+//         bn = (2.0/T0) * integrate(2, n);
+//         if (fabs(bn) < 1e-6) bn = 0.0;
+//         printf("%f ", bn);
+//     }
+//     printf("]\n");
+
+//     return 0;
+// }

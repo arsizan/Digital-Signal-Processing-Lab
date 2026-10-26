@@ -1,14 +1,22 @@
-//A program of matrix multiplication
+//Deconvolution: recover input x(n) from output y(n) and impulse response h(n)
 #include<stdio.h>
-
+//ok
 int main()
 {
-    int i,j,n,x_size,y_size,h_size,sum=0,temp,x_o,y_o,h_o;
+    int i,j,n,x_size,y_size,h_size,temp,x_o,y_o,h_o;
+    float sum=0;
     printf("Enter number of output samples: ");
     scanf("%d",&y_size);
     printf("Enter number of impulses: ");
     scanf("%d",&h_size);
     x_size=y_size-h_size+1;
+
+    if(x_size<1)
+    {
+        printf("Invalid: impulse response longer than output\n");
+        return 1;
+    }
+
     if(h_size>x_size)
     {
         n=h_size;
@@ -17,7 +25,8 @@ int main()
     {
         n=x_size;
     }
-    int y[y_size],h[n],x[x_size];
+    int y[y_size],h[n];
+    float x[x_size];
 
     for(i=0;i<n;i++)
     {
@@ -33,6 +42,13 @@ int main()
     {
         scanf("%d",&h[i]);
     }
+
+    if(h[0]==0)
+    {
+        printf("Deconvolution not possible: h[0] is zero\n");
+        return 1;
+    }
+
     printf("Enter origin point of y(n) \n");
     scanf("%d",&y_o);
     printf("Enter origin point of h(n) \n");
@@ -48,12 +64,12 @@ int main()
             sum=sum+x[j]*h[temp];
             temp--;
         }
-        x[i]=(int)((y[i]-sum)/h[0]);
+        x[i]=((float)(y[i]-sum))/h[0];
     }
     printf("\n Sample values of input: ");
     for(i=0;i<x_size;i++)
     {
-        printf("%d  ",x[i]);
+        printf("%.2f  ",x[i]);
     }
 
     printf("\n\nOrigin point of input: %d\n",x_o);

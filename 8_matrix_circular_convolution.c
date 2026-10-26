@@ -1,6 +1,6 @@
 // circular convolution - the matrix method
 #include <stdio.h>
-
+//ok
 int main()
 {
     int i, j, x1_size, x2_size, y_size;

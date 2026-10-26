@@ -1,5 +1,6 @@
 //circular convolution- the circle method
 #include <stdio.h>
+//ok
 int main()
 {
     int i,j,n,x1_size,y_size,x2_size,sum=0,temp,x_o,y_o,h_o;
@@ -48,9 +49,11 @@ int main()
         }
         y[i]=sum;
     }
+    printf("\n\nCircular convolution result: ");
     for(i=0;i<y_size;i++)
     {
         printf("%d  ",y[i]);
     }
+    printf("\n");
 return 0;
 }

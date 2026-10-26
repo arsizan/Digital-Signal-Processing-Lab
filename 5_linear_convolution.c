@@ -12,7 +12,7 @@ int main()
     y_size=x_size+h_size-1;
 
     int x[y_size],y[y_size],h[y_size];
-
+// padding of zeors
     for(i=0;i<y_size;i++)
     {
         x[i]=0;
@@ -30,12 +30,13 @@ int main()
     for(i=0;i<h_size; i++)
         scanf("%d",&h[i]);
 
-    printf("Enter origin point of x(n) \n");
-    scanf("%d",&x_o);
-    printf("Enter origin point of h(n) \n");
-    scanf("%d",&h_o);
+   printf("Enter starting index of x(n) [n value of 1st sample]: ");
+scanf("%d",&x_o);
+printf("Enter starting index of h(n) [n value of 1st sample]: ");
+scanf("%d",&h_o);
+y_o = x_o + h_o;
     y_o=x_o+h_o;
-// padding of zeors
+
 
 /* convolution operation */
 

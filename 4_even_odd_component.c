@@ -17,10 +17,9 @@ int main()
 
     printf("Enter number of sample of signal: ");
     scanf("%d",&x_size);
-    printf("Enter the samples of signal: \n");
+    printf("Enter the samples of signal: ");
     for(i=0;i<x_size;i++)
     {
-        printf("Enter sample: ");
         scanf("%d",&x[i]);
     }
     printf("Enter the sample no. which is the origin (1 to %d): ", x_size);
