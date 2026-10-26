@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//ok
 int main()
 {
     int x_size, y_size, z_size,i;

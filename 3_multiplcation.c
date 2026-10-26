@@ -1,7 +1,9 @@
 //multiplication of two discrete signals
 #include<stdio.h>
+//ok
 int main()
 {
+
     int x_size, y_size, z_size,i;
     int x[100],y[100],z[100];
     printf("Enter number of sample of first signal: ");
