@@ -25,34 +25,20 @@ int main()
     printf("Enter the samples of first signal: \n");
     for(i=0;i<x_size;i++)
     {
-        printf("Enter sample: ");
         scanf("%d",&x[i]);
     }
     printf("Enter the samples of second signal: \n");
     for(i=0;i<y_size;i++)
     {
-        printf("Enter sample: ");
         scanf("%d",&y[i]);
     }
+     printf("Resultant signal samples: ");
     for(i=0;i<z_size;i++)
     {
         z[i]=x[i]+y[i];
-    }
-    printf("\nFirst Signal samples: ");
-    for(i=0;i<x_size;i++)
-    {
-        printf("%d  ",x[i]);
-    }
-    printf("\n\nSecond Signal samples: ");
-    for(i=0;i<y_size;i++)
-    {
-        printf("%d  ",y[i]);
-    }
-    printf("\n\nResultant signal samples: ");
-    for(i=0;i<z_size;i++)
-    {
         printf("%d  ",z[i]);
     }
+    
     printf("\n");
     return 0;
 }

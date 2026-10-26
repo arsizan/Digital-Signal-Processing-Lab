@@ -35,7 +35,6 @@ scanf("%d",&x_o);
 printf("Enter starting index of h(n) [n value of 1st sample]: ");
 scanf("%d",&h_o);
 y_o = x_o + h_o;
-    y_o=x_o+h_o;
 
 
 /* convolution operation */
