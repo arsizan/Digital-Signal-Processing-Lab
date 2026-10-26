@@ -3,7 +3,7 @@
 //ok
 int main()
 {
-    int i,j,n,x1_size,y_size,x2_size,sum=0,temp,x_o,y_o,h_o;
+    int i,j,n,x1_size,y_size,x2_size,sum=0,temp;
     printf("Enter number of first signal samples: ");
     scanf("%d",&x1_size);
     printf("Enter number of second signal samples: ");
