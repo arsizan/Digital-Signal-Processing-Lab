@@ -21,15 +21,11 @@ import matplotlib.pyplot as plt
 
 Fs = 100               # samples per second
 dt = 1 / Fs
-t = np.arange(0, 1, dt)
+StopTime = 1              # seconds
+t = np.arange(0, StopTime + dt/2, dt)   # seconds
 
 Fc = 5
 x = np.cos(2 * np.pi * Fc * t)
-
-# plt.stem(t, x)
-# plt.xlabel('time (in seconds)')
-# plt.title('Discrete Time Signal')
-# plt.show()
 plt.subplot(2,1,1); plt.plot(t, x);  plt.title('Continuous')
 plt.subplot(2,1,2); plt.stem(t, x);  plt.title('Discrete')
 plt.show()
